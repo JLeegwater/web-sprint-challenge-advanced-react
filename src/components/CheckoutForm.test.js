@@ -35,6 +35,15 @@ test("form shows success message on submit with form details", () => {
   userEvent.click(checkout);
   const successMsg = screen.queryByTestId("successMessage");
   expect(successMsg).toBeInTheDocument();
+
+  const successName = screen.queryByText(/Jesse Leegwater/i);
+  expect(successName).toBeInTheDocument();
+
+  const successAddressP1 = screen.queryByText(/1234 Road/i);
+  expect(successAddressP1).toBeInTheDocument();
+
+  const successAddressP2 = screen.queryByText(/BigCity, CA 12345/i);
+  expect(successAddressP2).toBeInTheDocument();
 });
 
 /* test("proves the tests can fail", () => {
