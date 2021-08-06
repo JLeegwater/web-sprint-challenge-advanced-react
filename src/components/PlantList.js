@@ -17,10 +17,10 @@ export default class PlantList extends Component {
         ...this.state,
         plants: res.data,
       });
-      console.log(
+      /*       console.log(
         "🚀 ~ file: PlantList.js ~ line 20 ~ PlantList ~ axios.get ~ plants",
         this.state.plants
-      );
+      ); */
     });
   }
 
